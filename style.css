@@ -1,0 +1,289 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --orange: #ff5e00;
+}
+
+header {
+    background: #080808;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+}
+
+span {
+    color: var(--orange);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7)
+    ), url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+}
+
+.hero h1 {
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.hero h2 {
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--orange);
+    transform: scale(1.08);
+    box-shadow: 0 0 20px var(--orange);
+}
+
+section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: #202020;
+    width: 250px;
+    padding-bottom: 25px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 10px 30px #ff5e0055;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    color: var(--orange);
+}
+
+.card p {
+    padding: 0 15px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.price-card {
+    background: #202020;
+    padding: 35px 25px;
+    width: 280px;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+.price-card:hover {
+    transform: translateY(-12px);
+}
+
+.price-card h3 {
+    color: var(--orange);
+    font-size: 25px;
+}
+
+.price-card h2 {
+    margin: 25px 0;
+    font-size: 28px;
+}
+
+.price-card h2 span {
+    font-size: 14px;
+}
+
+.price-card p {
+    margin: 18px 0;
+    color: #ccc;
+}
+
+.price-card .btn {
+    margin-top: 20px;
+}
+
+.popular {
+    border: 2px solid var(--orange);
+    transform: scale(1.05);
+}
+
+.facility {
+    background: #202020;
+    padding: 30px;
+    width: 250px;
+    border-left: 4px solid var(--orange);
+    font-weight: bold;
+    transition: .3s;
+}
+
+.facility:hover {
+    background: var(--orange);
+    transform: translateY(-8px);
+}
+
+.register form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.register input,
+.register select,
+.register textarea {
+    padding: 16px;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.register textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.register button {
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    background: #080808;
+    padding: 40px 15px;
+    line-height: 2;
+    color: #ccc;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+}
